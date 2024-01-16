@@ -18,6 +18,7 @@ jobs:
           # Defaults to the user or organization that owns the workflow file
           scope: '@bmackio'
       - run: yarn
-      - run: yarn release // for Yarn version 1, use `yarn publish` instead
+      - run: yarn build
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
