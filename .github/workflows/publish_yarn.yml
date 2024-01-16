@@ -19,6 +19,8 @@ jobs:
           scope: '@bmackio'
       - run: yarn
       - run: yarn build
+        env:
+            NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
